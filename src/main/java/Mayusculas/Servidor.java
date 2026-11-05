@@ -1,3 +1,5 @@
+package Mayusculas;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -6,10 +8,8 @@ import java.net.BindException;
 import java.net.ServerSocket;
 import java.net.Socket;
 
-public class ServidorTcp{
+public class Servidor {
 
-
-    public class ServidorTCP {
         public static void main(String[] args) {
             int puerto = 6000;
 
@@ -21,7 +21,7 @@ public class ServidorTcp{
                          BufferedReader entrada = new BufferedReader(new InputStreamReader(socketCliente.getInputStream()));
                          PrintWriter salida = new PrintWriter(socketCliente.getOutputStream(), true)) {
 
-                        System.out.println("¡Cliente conectado desde: " + socketCliente.getInetAddress() + "!");
+                        System.out.println("¡p10.Cliente conectado desde: " + socketCliente.getInetAddress() + "!");
 
                         String mensajeRecibido = entrada.readLine();
 
@@ -48,4 +48,4 @@ public class ServidorTcp{
             }
         }
     }
-}
+
